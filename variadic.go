@@ -35,6 +35,14 @@ func filter5(nums ...int) []int{
 	return newList
 }
 
+func times(multiplier int, nums ...int) []int {
+    var newList []int
+    for _, num := range nums {
+        newList = append(newList, num*multiplier)
+    }
+    return newList
+}
+
 
 func main() {
 	sum(1,2)
@@ -43,4 +51,6 @@ func main() {
 	mult(1,2,3)
 	newList := filter5(12,3,2,41,345,345,342,3,234,2342)
 	fmt.Println(newList)
+	anotherList := times(5,12,3,2,3,4)
+	fmt.Println(anotherList)
 }
